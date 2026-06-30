@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from 'react'
 
-const MODEL = 'gemini-2.0-flash'
+const MODEL = 'gemini-1.5-flash'
 
 const systemPrompt = (childName, phase, dayTitle) =>
 `Bạn là Stu — người bạn thông minh, vui vẻ, kiên nhẫn đang học cùng ${childName || 'bé'} (10 tuổi) về chủ đề "${dayTitle}" trong Giai đoạn ${phase} của hành trình 30 ngày khám phá AI.
@@ -41,7 +41,7 @@ export function useAI(apiKey) {
     const userMsg = { role: 'user', content: text.trim() }
     const next = [...messages, userMsg]
     setMessages(next)
-    setLoading(true)
+    loading = true
     setError(null)
     hints.current += 1
 
