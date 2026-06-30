@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from 'react'
 
-const MODEL = 'gemini-1.5-flash'
+const MODEL = 'gemini-2.5-flash'
 
 const systemPrompt = (childName, phase, dayTitle) =>
 `Bạn là Stu — người bạn thông minh, vui vẻ, kiên nhẫn đang học cùng ${childName || 'bé'} (10 tuổi) về chủ đề "${dayTitle}" trong Giai đoạn ${phase} của hành trình 30 ngày khám phá AI.
